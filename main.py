@@ -111,8 +111,8 @@ class ODLVisualizer:
             self.output.insert(tk.END, f"Error: {e}\n")
             # Fallback: load from local backup
             try:
-                if os.path.exists("ODL_RES.json"):
-                    with open("ODL_RES.json", "r") as f:
+                if os.path.exists("odl_response.json"):
+                    with open("odl_response.json", "r") as f:
                         data = json.load(f)
                     self.output.insert(tk.END, "Using local ODL_RES.json backup.\n")
                     self.update_topology(data, update_only)
